@@ -69,6 +69,54 @@
 <body class="body-wrapper">
 @inject('injected','App\Defaults\Custom')
 
+<div id="preloader" class="preloader">
+    <div class="animation-preloader">
+        <div class="spinner">
+        </div>
+        <div class="txt-loading">
+                    <span data-text-preloader="L" class="letters-loading">
+                        L
+                    </span>
+            <span data-text-preloader="O" class="letters-loading">
+                        O
+                    </span>
+            <span data-text-preloader="A" class="letters-loading">
+                    A
+                    </span>
+            <span data-text-preloader="D" class="letters-loading">
+                    D
+                    </span>
+            <span data-text-preloader="I" class="letters-loading">
+                        I
+                    </span>
+            <span data-text-preloader="N" class="letters-loading">
+                        N
+                    </span>
+            <span data-text-preloader="G" class="letters-loading">
+                        G
+                    </span>
+
+        </div>
+        <p class="text-center">Loading</p>
+    </div>
+    <div class="loader">
+        <div class="row">
+            <div class="col-3 loader-section section-left">
+                <div class="bg"></div>
+            </div>
+            <div class="col-3 loader-section section-left">
+                <div class="bg"></div>
+            </div>
+            <div class="col-3 loader-section section-right">
+                <div class="bg"></div>
+            </div>
+            <div class="col-3 loader-section section-right">
+                <div class="bg"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- header end -->
 <header class="header header-1 transparent header-2">
     <div class="top-header d-none d-xl-block">
@@ -213,7 +261,59 @@
         </div>
     </div>
 </header>
+<div class="google-g">
+    <div id="google_translate_element"></div>
 
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</div>
+
+<style>
+
+    .google-g {
+        z-index: 10 !important;
+        width: 250px;
+        box-sizing: border-box;
+        margin-left: 20px;
+        position:absolute;
+        float: right;
+        margin-top: 100px;
+        overflow: hidden;
+        opacity: 20;
+    }
+    a.goog-te-menu-value span{
+        color:#870A0C;
+
+    }
+
+    .goog-te-combo {
+        color:#870A0C;
+
+    }
+    .goog-te-banner-frame{
+        display:none !important;
+    }
+
+    @media(max-width:480px) {
+
+        .google-g {
+            box-sizing: border-box;
+            margin-right: 20px;
+            position:absolute;
+            float: right;
+            margin-top: 90px;
+            overflow: hidden;
+            opacity: 20;
+        }
+    }
+
+</style>
 <!-- mobile menu - responsive menu  -->
 <div class="mobile-nav mobile-nav-yellow">
     <button type="button" class="close-nav">
@@ -456,57 +556,57 @@
 <script src="{{asset('home/js/jquery.easypiechart.min.js')}}"></script>
 <script src="{{asset('home/js/active.js')}}"></script>
 <!-- Google language start -->
-<style>
+{{--<style>--}}
 
-    #google_translate_element {
-        z-index: 9999999;
-        position: fixed;
-        bottom: 25px;
-        left: 15px;
-    }
+{{--    #google_translate_element {--}}
+{{--        z-index: 9999999;--}}
+{{--        position: fixed;--}}
+{{--        bottom: 25px;--}}
+{{--        left: 15px;--}}
+{{--    }--}}
 
-    .goog-te-gadget {
-        font-family: Roboto, "Open Sans", sans-serif !important;
-        text-transform: uppercase;
-    }
-    .goog-te-gadget-simple
-    {
-        padding: 0px !important;
-        line-height: 1.428571429;
-        color: white;
-        vertical-align: middle;
-        background-color: black;
-        border: 1px solid #a5a5a599;
-        border-radius: 4px;
-        float: right;
-        margin-top: -4px;
-        z-index: 999999;
-    }
-    .goog-te-banner-frame.skiptranslate
-    {
-        display: none !important;
-        color: white;
-    }
-    .goog-te-gadget-icon
-    {
-        background: none !important;
-        display: none;
-        color: white;
-    }
-    .goog-te-gadget-simple .goog-te-menu-value
-    {
-        font-size: 12px;
-        color: white;
-        font-family: 'Open Sans' , sans-serif;
-    }
-</style>
-<div id="google_translate_element"></div>
-<script type="text/javascript">
-    window.onload = function googleTranslateElementInit() {
-        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
-    }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+{{--    .goog-te-gadget {--}}
+{{--        font-family: Roboto, "Open Sans", sans-serif !important;--}}
+{{--        text-transform: uppercase;--}}
+{{--    }--}}
+{{--    .goog-te-gadget-simple--}}
+{{--    {--}}
+{{--        padding: 0px !important;--}}
+{{--        line-height: 1.428571429;--}}
+{{--        color: white;--}}
+{{--        vertical-align: middle;--}}
+{{--        background-color: black;--}}
+{{--        border: 1px solid #a5a5a599;--}}
+{{--        border-radius: 4px;--}}
+{{--        float: right;--}}
+{{--        margin-top: -4px;--}}
+{{--        z-index: 999999;--}}
+{{--    }--}}
+{{--    .goog-te-banner-frame.skiptranslate--}}
+{{--    {--}}
+{{--        display: none !important;--}}
+{{--        color: white;--}}
+{{--    }--}}
+{{--    .goog-te-gadget-icon--}}
+{{--    {--}}
+{{--        background: none !important;--}}
+{{--        display: none;--}}
+{{--        color: white;--}}
+{{--    }--}}
+{{--    .goog-te-gadget-simple .goog-te-menu-value--}}
+{{--    {--}}
+{{--        font-size: 12px;--}}
+{{--        color: white;--}}
+{{--        font-family: 'Open Sans' , sans-serif;--}}
+{{--    }--}}
+{{--</style>--}}
+{{--<div id="google_translate_element"></div>--}}
+{{--<script type="text/javascript">--}}
+{{--    window.onload = function googleTranslateElementInit() {--}}
+{{--        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');--}}
+{{--    }--}}
+{{--</script>--}}
+{{--<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>--}}
 <!-- start popup massage -->
 <div class="notifier" style="display: none;">
     <div class="txt" style="color:black;">While you are waiting,someone from <b></b> just traded with <a href="javascript:void(0);" onclick="javascript:void(0);"></a></div>
@@ -561,6 +661,36 @@
 </script>
 <!-- end popup massage -->
 @stack('js')
+<style>
+    .float{
+        position:fixed;
+        width:60px;
+        height:60px;
+        bottom:40px;
+        left:40px;
+        background-color:#00bb2d;
+        color:#FFF;
+        border-radius:50px;
+        text-align:center;
+        font-size:30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index:100;
+    }
+    .float:hover {
+        text-decoration: none;
+        color: #00bb2d;
+        background-color:#fff;
+    }
 
+    .my-float{
+        margin-top:16px;
+    }
+</style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://api.whatsapp.com/send?phone={{$web->phone}}" class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+</a>
+<!-- // Whatsapp -->
 </body>
 </html>
