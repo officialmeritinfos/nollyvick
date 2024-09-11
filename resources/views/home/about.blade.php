@@ -99,6 +99,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-12">
+                    <a href="{{asset('home/certificate.jpg')}}" target="_blank">
+                        <img src="{{asset('home/certificate.jpg')}}">
+                    </a>
+                </div>
             </div>
         </div>
     </section>
