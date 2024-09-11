@@ -126,7 +126,7 @@
                     <div class="header-logo">
                         <div class="logo">
                             <a href="{{url('index')}}">
-                                <img src="{{asset('home/images/'.$web->logo)}}" alt="logo" style="width: 100px;">
+                                <img src="{{asset('home/images/'.$web->logo)}}" alt="logo" style="width: 150px;">
                             </a>
                         </div>
                     </div>
@@ -692,5 +692,18 @@
     <i class="fa fa-whatsapp my-float"></i>
 </a>
 <!-- // Whatsapp -->
+
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = 'df7134eb3e83925c899699c96c5f569dd355aaf0';
+    window.smartsupp||(function(d) {
+        var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+        s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+        c.type='text/javascript';c.charset='utf-8';c.async=true;
+        c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+    })(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
 </body>
 </html>
