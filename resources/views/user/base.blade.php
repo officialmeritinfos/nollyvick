@@ -68,6 +68,13 @@
             <li class="nav-item-title">MENU</li>
 
             <li>
+                <a href="{{url('/')}}" class="box-style">
+                    <i class="ri-global-fill"></i>
+                    <span class="menu-title">Home</span>
+                </a>
+            </li>
+
+            <li>
                 <a href="{{url('account/dashboard')}}" class="box-style">
                     <i class="ri-home-2-fill"></i>
                     <span class="menu-title">Dashboard</span>
