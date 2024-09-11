@@ -261,59 +261,7 @@
         </div>
     </div>
 </header>
-<div class="google-g">
-    <div id="google_translate_element"></div>
 
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-        }
-    </script>
-
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-</div>
-
-<style>
-
-    .google-g {
-        z-index: 10 !important;
-        width: 250px;
-        box-sizing: border-box;
-        margin-left: 20px;
-        position:absolute;
-        float: right;
-        margin-top: 100px;
-        overflow: hidden;
-        opacity: 20;
-    }
-    a.goog-te-menu-value span{
-        color:#870A0C;
-
-    }
-
-    .goog-te-combo {
-        color:#870A0C;
-
-    }
-    .goog-te-banner-frame{
-        display:none !important;
-    }
-
-    @media(max-width:480px) {
-
-        .google-g {
-            box-sizing: border-box;
-            margin-right: 20px;
-            position:absolute;
-            float: right;
-            margin-top: 90px;
-            overflow: hidden;
-            opacity: 20;
-        }
-    }
-
-</style>
 <!-- mobile menu - responsive menu  -->
 <div class="mobile-nav mobile-nav-yellow">
     <button type="button" class="close-nav">
@@ -660,13 +608,65 @@
     }
 </script>
 <!-- end popup massage -->
+<!-- Google language start -->
+<style>
+
+    #google_translate_element {
+        z-index: 9999999;
+        position: fixed;
+        bottom: 25px;
+        left: 15px;
+    }
+
+    .goog-te-gadget {
+        font-family: Roboto, "Open Sans", sans-serif !important;
+        text-transform: uppercase;
+    }
+    .goog-te-gadget-simple
+    {
+        padding: 0px !important;
+        line-height: 1.428571429;
+        color: white;
+        vertical-align: middle;
+        background-color: black;
+        border: 1px solid #a5a5a599;
+        border-radius: 4px;
+        float: right;
+        margin-top: -4px;
+        z-index: 999999;
+    }
+    .goog-te-banner-frame.skiptranslate
+    {
+        display: none !important;
+        color: white;
+    }
+    .goog-te-gadget-icon
+    {
+        background: none !important;
+        display: none;
+        color: white;
+    }
+    .goog-te-gadget-simple .goog-te-menu-value
+    {
+        font-size: 12px;
+        color: white;
+        font-family: 'Open Sans' , sans-serif;
+    }
+</style>
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+    window.onload = function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 @stack('js')
 <style>
     .float{
         position:fixed;
         width:60px;
         height:60px;
-        bottom:40px;
+        bottom:10rem;
         left:40px;
         background-color:#00bb2d;
         color:#FFF;
