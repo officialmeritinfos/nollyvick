@@ -455,7 +455,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="pricing__content mb-60 mb-sm-40 mb-xs-30 text-center">
-                        <span class="sub-title d-block fw-500 color-yellow text-uppercase mb-sm-10 mb-xs-5 mb-md-15 mb-lg-20 mb-25"><img src="https://libertymultipleasset.com/home/img/team-details/badge-line-yellow.svg" class="img-fluid mr-10" alt=""> Our Work Process</span>
+                        <span class="sub-title d-block fw-500 color-yellow text-uppercase mb-sm-10 mb-xs-5 mb-md-15 mb-lg-20 mb-25"><img src="{{asset('home/img/team-details/badge-line-yellow.svg')}}" class="img-fluid mr-10" alt=""> Our Work Process</span>
                         <h2 class="title color-d_black">How Our Investment Work</h2>
                     </div>
                 </div>
@@ -472,7 +472,7 @@
                             <h6 class="title color-secondary mb-15 mb-sm-10 mb-xs-5">Create account</h6>
 
                             <div class="description font-la">
-                                <p>Create a secured account on Liberty Multiple Asset</p>
+                                <p>Create a secured account on {{$siteName}}</p>
                             </div>
                         </div>
 
@@ -791,8 +791,8 @@
             <div class="row align-items-center">
                 <div class="col-12">
                     <div class="blog-news__content text-center">
-                        <span class="sub-title fw-500  text-uppercase mb-sm-10 mb-xs-5 mb-15 d-block color-yellow"><img src="https://libertymultipleasset.com/home/img/team-details/badge-line-yellow.svg" class="img-fluid mr-10" alt=""> Blog & News</span>
-                        <h2 class="title color-d_black">Liberty Multiple Asset Latest Blog & News</h2>
+                        <span class="sub-title fw-500  text-uppercase mb-sm-10 mb-xs-5 mb-15 d-block color-yellow"><img src="{{asset('home/img/team-details/badge-line-yellow.svg')}}" class="img-fluid mr-10" alt=""> Blog & News</span>
+                        <h2 class="title color-d_black">{{$siteName}} Latest Blog & News</h2>
                     </div>
                 </div>
             </div>
